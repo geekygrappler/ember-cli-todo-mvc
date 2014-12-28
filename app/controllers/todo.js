@@ -22,5 +22,10 @@ export default Ember.ObjectController.extend({
             todo.deleteRecord();
             todo.save();
         }
-    }
+    },
+
+    changeTodoStatus: function() {
+        console.log("Changed is completed");
+        this.get('model').save();
+    }.observes('isCompleted')
 });
