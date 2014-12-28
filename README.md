@@ -1,7 +1,10 @@
 # Todo-mvc
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The written tutorial is availabe here: http://thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/
+
+As the tutorial is extended, e.g. by adding an API, those parts of the tutorail will be available on branches.
+
+Enjoy.
 
 ## Prerequisites
 
