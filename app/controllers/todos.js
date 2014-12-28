@@ -15,10 +15,6 @@ export default Ember.ArrayController.extend({
             // Save the new model
             todo.save();
         },
-<<<<<<< HEAD
-
-=======
->>>>>>> master
         clearCompleted: function() {
             var completed = this.filterBy('isCompleted', true);
             completed.invoke('deleteRecord');
@@ -41,8 +37,6 @@ export default Ember.ArrayController.extend({
      
     completed: function() {
         return this.filterBy('isCompleted', true).get('length');
-<<<<<<< HEAD
-=======
     }.property('@each.isCompleted'),
 
     allAreDone: function(key, value) {
@@ -54,6 +48,5 @@ export default Ember.ArrayController.extend({
             this.invoke('save');
             return value;
         }
->>>>>>> master
     }.property('@each.isCompleted')
 });
