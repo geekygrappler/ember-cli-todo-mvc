@@ -1,15 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/api/dist
+/server/dist
 /client/dist
-/api/tmp
+/server/tmp
 /client/tmp
 
 # dependencies
-/api/node_modules
+/server/node_modules
 /client/node_modules
-/api/bower_components
+/server/bower_components
 /client/bower_components
 
 # misc
