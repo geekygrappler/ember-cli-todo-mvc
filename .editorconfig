@@ -15,19 +15,19 @@ indent_size = 2
 
 [*.js]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.hbs]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.css]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.html]
 indent_style = space
-indent_size = 2
+indent_size = 4
 
 [*.md]
 trim_trailing_whitespace = false
