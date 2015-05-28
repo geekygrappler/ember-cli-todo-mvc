@@ -1,17 +1,17 @@
 # Todo-mvc
 
-The written tutorial is availabe here: http://thetechcofounder.com/getting-started-with-ember-js-using-ember-cli/
-
-As the tutorial is extended, e.g. by adding an API, those parts of the tutorail will be available on branches.
-
-Enjoy.
+This README outlines the details of collaborating on this Ember application.
+A short introduction of this app could easily go here.
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+* [Node.js](http://nodejs.org/) (with NPM)
+* [Bower](http://bower.io/)
+* [Ember CLI](http://www.ember-cli.com/)
+* [PhantomJS](http://phantomjs.org/)
 
 ## Installation
 
@@ -19,7 +19,6 @@ You will need the following things properly installed on your computer.
 * change into the new directory
 * `npm install`
 * `bower install`
-Install handlebars 1.3 when asked
 
 ## Running / Development
 
