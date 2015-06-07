@@ -29,5 +29,5 @@ indent_size = 4
 indent_style = space
 indent_size = 4
 
-[*.md]
+[*.{diff,md}]
 trim_trailing_whitespace = false
