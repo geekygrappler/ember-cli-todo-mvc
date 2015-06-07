@@ -29,12 +29,14 @@ export default Ember.Component.extend({
         var model = this.get('model');
         return model.filterBy('isCompleted', true).get('length');
     }),
-    allAreDone: Ember.computed('model.@each.isCompleted', function(key, value) {
-        var model = this.get('model');
-        console.log(key + ": " + value);
-        if (value === undefined) {
+    allAreDone: Ember.computed('model.@each.isCompleted', {
+        get: function() {
+            var model = this.get('model');
             return model.get('length') > 0 && model.isEvery('isCompleted', true);
-        } else {
+        },
+        set: function(key, value) {
+            var model = this.get('model');
+            console.log(key + ": " + value);
             model.setEach('isCompleted', value);
             model.invoke('save');
             return value;
