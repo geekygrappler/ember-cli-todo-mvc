@@ -1,0 +1,7 @@
+<ul id="todo-list">
+    {{#each model as |todo|}}
+        {{todo-item todo=todo updateTodo="updateTodo" deleteTodo="deleteTodo"}}
+    {{/each}}
+</ul>
+
+{{outlet}}

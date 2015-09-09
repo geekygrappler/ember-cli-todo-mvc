@@ -1,0 +1,28 @@
+<section id="main">
+    {{yield}}
+
+    {{input type="checkbox" id="toggle-all" checked=allAreDone}}
+</section>  
+
+<footer id="footer">
+    <span id="todo-count">
+        <strong>{{remaining}}</strong> {{inflection}} left
+    </span>
+    <ul id="filters">
+        <li>
+            {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
+        </li>
+        <li>
+            {{#link-to "todos.incomplete" activeClass="selected"}}Active{{/link-to}}
+        </li>
+        <li>
+            {{#link-to "todos.complete" activeClass="selected"}}Complete{{/link-to}}
+        </li>
+    </ul>
+
+    {{#if hasCompleted}}
+        <button id="clear-completed" {{action "clearCompleted"}}>
+            Clear completed ({{completed}})
+        </button>
+    {{/if}}
+</footer>
