@@ -13,7 +13,7 @@ export default Ember.Component.extend({
         let completeValue = this.get('allAreDone');
         let todos = this.get('todos');
         todos.forEach((todo) => {
-            todo.set('complete', completeValue)
+            todo.set('complete', completeValue);
             this.sendAction('updateTodo', todo);
         });
     }),
