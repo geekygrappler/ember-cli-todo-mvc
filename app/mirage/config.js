@@ -13,7 +13,7 @@ export default function() {
             data: {
                 type: 'todos',
                 id: todo.id,
-                attributs: todo
+                attributes: todo
             }
         };
     });
