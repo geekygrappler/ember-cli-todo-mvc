@@ -9,14 +9,6 @@ export default Ember.Component.extend({
             this.set('allAreDone', false);
         }
     },
-    allAreDoneObserver: Ember.observer('allAreDone', function() {
-        let completeValue = this.get('allAreDone');
-        let todos = this.get('todos');
-        todos.forEach((todo) => {
-            todo.set('complete', completeValue);
-            this.sendAction('updateTodo', todo);
-        });
-    }),
     remaining: Ember.computed('todos.@each.complete', function() {
         let todos = this.get('todos');
         return todos.filterBy('complete', false).get('length');
@@ -36,7 +28,14 @@ export default Ember.Component.extend({
         clearCompleted() {
             let completed = this.get('todos').filterBy('complete', true);
             completed.forEach((todo) => {
-                this.sendAction('deleteTodo', todo);
+                todo.destroyRecord();
+            });
+        },
+        toggleAll(completeValue) {
+            this.set("allAreDone", completeValue);
+            let todos = this.get('todos');
+            todos.forEach((todo) => {
+                todo.set('complete', completeValue);
             });
         }
     }

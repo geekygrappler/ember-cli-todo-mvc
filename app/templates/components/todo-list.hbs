@@ -1,8 +1,8 @@
 <section id="main">
     {{yield}}
 
-    {{input type="checkbox" id="toggle-all" checked=allAreDone}}
-</section>  
+    <input type="checkbox" id="toggle-all" checked={{allAreDone}} onclick={{action "toggleAll" value="target.checked"}} />
+</section>
 
 <footer id="footer">
     <span id="todo-count">

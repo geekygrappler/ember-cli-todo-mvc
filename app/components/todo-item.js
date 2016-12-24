@@ -1,25 +1,25 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-    tagName: 'li',
-    classNameBindings: ['editing'],
+    tagName: "li",
+    classNameBindings: ["editing"],
     editing: false,
     actions: {
         editTodo() {
-            this.toggleProperty('editing');
+            this.toggleProperty("editing");
         },
         submitTodo() {
-            let todo = this.get('todo');
-            if (todo.get('title') === "") {
-                this.sendAction('deleteTodo', todo);
+            const todo = this.get("todo");
+            if (todo.get("title") == "") {
+                todo.destroyRecord().then(() => {
+                    this.toggleProperty("editing");
+                });
             } else {
-                this.sendAction('updateTodo', this.get('todo'));
+                this.toggleProperty("editing");
             }
-            this.set('editing', false);
         },
         deleteTodo() {
-            let todo = this.get('todo');
-            this.sendAction('deleteTodo', todo);
+            this.get("todo").destroyRecord();
         }
     }
 });

@@ -1,4 +1,5 @@
-{{todo-input action="createTodo"}}
-{{#todo-list todos=model deleteTodo="deleteTodo"}}
+{{todo-input}}
+
+{{#todo-list todos=model}}
     {{outlet}}
 {{/todo-list}}
